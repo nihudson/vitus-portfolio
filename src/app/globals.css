@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-Aptos);
+}
+
+.hello {
+  background: #fff;
+  padding: 10px;
+}
+
+
+.dashboardheaderheader {
+  z-index: 1 !important;
+}
+
+.dashboardsidebar {
+  z-index: 999 !important;
+}
+
+.aptos {
+  font-family: var(--font-Aptos) !important;
+}
+
+.comic {
+  font-family: var(--font-Comic) !important;
+}
+
+.heroBG {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.696), rgba(0, 0, 0, 0.235), rgba(0, 0, 0, 0)), url("https://res.cloudinary.com/dg83pvgls/image/upload/v1769591832/2151305304_hh2rrj.jpg");
+  background-position: top center !important;
+  background-repeat: no-repeat;
+}

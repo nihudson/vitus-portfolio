@@ -1,0 +1,16 @@
+{
+    "freeConsultation": {
+        "title": "Need expert IT advice?",
+        "subtitle": "Take advantage of a free consultation to review your IT needs.",
+        "description": "Our experts review your current IT environment and propose tailored solutions, with no commitment on your part. A 30 to 45-minute session designed to help you make the right decisions for your IT setup.",
+        "cta": {
+            "label": "Schedule a free consultation",
+            "link": ""
+        },
+        "features": [
+            "No commitment",
+            "Response within 24 hours",
+            "Free personalized quote"
+        ]
+    }
+}

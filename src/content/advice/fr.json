@@ -1,0 +1,16 @@
+{
+    "freeConsultation": {
+        "title": "Besoin d'un avis ou d'un accompagnement ?",
+        "subtitle": "Profitez d'une consultation gratuite pour évaluer vos besoins informatiques.",
+        "description": "Nos experts analysent votre situation actuelle, identifient vos besoins et vous proposent des solutions adaptées, sans engagement de votre part. Un rendez-vous de 30 à 45 minutes qui peut transformer votre informatique.",
+        "cta": {
+            "label": "Planifier une consultation gratuite",
+            "link": ""
+        },
+        "features": [
+            "Sans engagement",
+            "Réponse sous 24h",
+            "Devis personnalisé gratuit"
+        ]
+    }
+}
