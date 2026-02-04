@@ -8,6 +8,9 @@ import ContactUsBtn from "../ContactUsBtn";
 export default function ServiceCards({ l }) {
 
 
+    console.log(l);
+
+
     const services = [
         {
             icon: Headphones,
@@ -24,6 +27,7 @@ export default function ServiceCards({ l }) {
                 l?.service1List7
             ],
             isLeft: true,
+            Included: l?.Included,
             image: "https://res.cloudinary.com/dg83pvgls/image/upload/v1769512983/itsupport_mklkjg.jpg"
 
         },
@@ -41,6 +45,7 @@ export default function ServiceCards({ l }) {
                 l?.service2List6
             ],
             isLeft: false,
+            Included: l?.Included,
             image: "https://res.cloudinary.com/dg83pvgls/image/upload/v1769511869/maintaince_kn9cfu.jpg"
 
         },
@@ -58,6 +63,7 @@ export default function ServiceCards({ l }) {
                 l?.service3List6
             ],
             isLeft: true,
+            Included: l?.Included,
             image: "https://res.cloudinary.com/dg83pvgls/image/upload/v1769511870/protected_nwvutf.jpg"
         },
         {
@@ -76,6 +82,7 @@ export default function ServiceCards({ l }) {
                 l?.service4List8
             ],
             isLeft: false,
+            Included: l?.Included,
             image: "https://res.cloudinary.com/dg83pvgls/image/upload/v1769511867/network_mj4gw1.jpg"
 
         },
@@ -92,6 +99,7 @@ export default function ServiceCards({ l }) {
                 l?.service5List5,
             ],
             isLeft: true,
+            Included: l?.Included,
             image: "https://res.cloudinary.com/dg83pvgls/image/upload/v1769511863/cloud_cqnltk.jpg"
 
         },
@@ -108,6 +116,7 @@ export default function ServiceCards({ l }) {
                 l?.service6List5,
             ],
             isLeft: false,
+            Included: l?.Included,
             image: "https://res.cloudinary.com/dg83pvgls/image/upload/v1769601509/balok_hv8rkj.jpg"
         },
         {
@@ -122,6 +131,7 @@ export default function ServiceCards({ l }) {
                 l?.service7List4,
             ],
             isLeft: true,
+            Included: l?.Included,
             image: "https://res.cloudinary.com/dg83pvgls/image/upload/v1769512985/custom_1_zgou8o.jpg"
 
         }
@@ -189,7 +199,7 @@ export default function ServiceCards({ l }) {
                                             ease: "easeOut"
                                         }}
                                         className="text-md font-semibold text-gray-500 mb-3">
-                                        Included services:
+                                        {service?.Included}
                                     </motion.h4>
                                     <ul className="space-y-2 flex flex-col gap-2">
                                         {service.prestations.map((prestation, idx) => (
