@@ -9,9 +9,9 @@ This is a web application built with Next.js, featuring a public-facing website 
   - About Us
   - Services
   - Contact Us
-- **Dashboard**: A secure area for administrators to manage the content of the website.
+
 - **Multilingual Support**: Content can be managed and displayed in both English and French.
-- **API**: A set of API endpoints to manage the application's data.
+
 
 ## Getting Started
 
@@ -28,8 +28,9 @@ You need to have Node.js and npm installed on your machine.
 
 1.  **Clone the repository:**
     ```bash
-    https://github.com/sardarit-bd/vithu.git
-    cd vithu
+    https://github.com/nihudson/vitus-portfolio.git
+    cd vitus-portfolio
+
     ```
 
 2.  **Install dependencies:**
@@ -39,15 +40,10 @@ You need to have Node.js and npm installed on your machine.
 
 3.  **Set up environment variables:**
     Create a `.env.local` file in the root of the project and add the necessary environment variables. You will need to provide credentials for:
-    - MongoDB
-    - Cloudinary
+
     - EmailJS
 
     ```
-    MONGODB_URI=your_mongodb_connection_string
-    CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-    CLOUDINARY_API_KEY=your_cloudinary_api_key
-    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
     EMAILJS_SERVICE_ID=your_emailjs_service_id
     EMAILJS_TEMPLATE_ID=your_emailjs_template_id
     EMAILJS_USER_ID=your_emailjs_user_id
@@ -97,17 +93,6 @@ vithu/
 └── package.json         # Project dependencies and scripts
 ```
 
-## API Endpoints
-
-The API routes are located in `src/app/api`.
-
--   `POST /api/auth/login`: Authenticates a user.
--   `POST /api/auth/signin`: Registers a new user.
--   `GET, POST /api/about`: Manages content for the About page.
--   `GET, POST /api/footer`: Manages footer links and content.
--   `GET, PUT, DELETE /api/footer/[id]`: Manages a specific footer item.
--   `GET, POST /api/services/offer`: Manages service offers.
--   `GET, POST /api/services/pages`: Manages content for service pages.
 
 ## Technologies Used
 
@@ -123,13 +108,13 @@ The API routes are located in `src/app/api`.
 -   [React Hot Toast](https://react-hot-toast.com/) - Notifications
 -   [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) - Notifications
 
-### Backend
 
--   [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction)
--   [Mongoose](https://mongoosejs.com/) - MongoDB object modeling
--   [MongoDB](https://www.mongodb.com/) - NoSQL database
 
 ### Services
 
 -   [Cloudinary](https://cloudinary.com/) - Image and video management
 -   [EmailJS](https://www.emailjs.com/) - Email service
+
+
+
+### Thank you So much
