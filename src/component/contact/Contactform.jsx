@@ -201,8 +201,8 @@ export default function ContactSection({ l }) {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-gray-900 mb-1">{l?.eTitle}</h3>
-                                    <a href="mailto:support@switzerit.com" className="text-red-600 hover:text-red-700">
-                                        support@switzerit.com
+                                    <a href="mailto:contact@switzerit.com" className="text-red-600 hover:text-red-700">
+                                        contact@switzerit.com
                                     </a>
                                 </div>
                             </div>

@@ -55,13 +55,43 @@ const Comic = localFont({
 
 
 
-
-
-
 export const metadata = {
-  title: "Switzer IT",
-  description: "Solutions informatiques professionnelles pour entreprises et particuliers.",
+  title: "SwitzerIT – Software & IT Solutions",
+  description:
+    "SwitzerIT supports your IT projects with a professional,secure, and tailored approach. From technical support to fully managed IT services, we put our expertise at the service of your success.",
+
+  openGraph: {
+    title: "SwitzerIT – Software & IT Solutions",
+    description:
+      "SwitzerIT supports your IT projects with a professional, secure, and tailored approach.From technical support to fully managed IT services, we put our expertise at the service of your success.",
+    url: "https://www.switzerit.com",
+    siteName: "SwitzerIT",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dg83pvgls/image/upload/v1770027131/logo_qyncup.png",
+        width: 1200,
+        height: 630,
+        alt: "SwitzerIT Logo",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "SwitzerIT – Software & IT Solutions",
+    description:
+      "SwitzerIT supports your IT projects with a professional,secure, and tailored approach. From technical support to fully managed IT services, we put our expertise at the service of your success.",
+    images: ["https://res.cloudinary.com/dg83pvgls/image/upload/v1770027131/logo_qyncup.png"],
+  },
+
+  metadataBase: new URL("https://www.switzerit.com"),
 };
+
+
+
+
+
 
 export default function RootLayout({ children }) {
 

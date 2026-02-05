@@ -88,11 +88,11 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <li>
                                 <a
-                                    href="mailto:support@switzerit.com"
+                                    href="mailto:contact@switzerit.com"
                                     className="flex items-center gap-2 text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                                 >
                                     <Mail className="w-4 h-4" />
-                                    <span>support@switzerit.com</span>
+                                    <span>contact@switzerit.com</span>
                                 </a>
                             </li>
                             <li>
