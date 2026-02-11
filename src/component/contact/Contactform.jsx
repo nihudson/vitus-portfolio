@@ -3,11 +3,13 @@
 import { sendEmail } from '@/utiliy/sendEmail';
 import { motion } from "framer-motion";
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function ContactSection({ l }) {
 
+    const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         fullName: '',
@@ -45,9 +47,13 @@ export default function ContactSection({ l }) {
                 company: '',
                 subject: '',
                 message: ''
-            })
+            });
+
+            // redirect to thank you page
+            router.push('/contact/thank-you');
+
         } catch (error) {
-            toast("Failed to send Email");
+            toast("Failed to send Email. Try Again");
             console.error(error);
         } finally {
             setLoading(false);
