@@ -1,10 +1,27 @@
 'use client';
 
+import useLan from '@/stores/store/useLan';
+import lanChooser from '@/utiliy/lanChooser';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import en from "../../../../content/thank-you/en.json";
+import fr from "../../../../content/thank-you/fr.json";
+
 
 export default function ThankYouPage() {
+
+
+
+
+    const { ln } = useLan();
+    const currentlan = lanChooser(ln, fr, en);
+
+
+
+
+
+
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -88,7 +105,7 @@ export default function ThankYouPage() {
                     className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4"
                     variants={itemVariants}
                 >
-                    Thank You!
+                    {currentlan?.title}
                 </motion.h1>
 
                 {/* Subheading */}
@@ -96,7 +113,7 @@ export default function ThankYouPage() {
                     className="text-base sm:text-lg text-center text-gray-600 mb-8"
                     variants={itemVariants}
                 >
-                    We've received your submission successfully. Your Message means the world to us!
+                    {currentlan?.des}
                 </motion.p>
 
 
@@ -112,7 +129,7 @@ export default function ThankYouPage() {
                     >
                         <ArrowLeft className="w-5 h-5" />
                         <Link className='h-full w-full' href={'/'}>
-                            Back to Home
+                            {currentlan?.button1}
                         </Link>
                     </motion.button>
 
@@ -122,7 +139,7 @@ export default function ThankYouPage() {
                         whileTap={{ scale: 0.95 }}
                     >
                         <Link className='h-full w-full' href={'/contact'}>
-                            Contact Again
+                            {currentlan?.button2}
                         </Link>
                     </motion.button>
                 </motion.div>
