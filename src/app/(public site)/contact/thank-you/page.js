@@ -5,8 +5,10 @@ import lanChooser from '@/utiliy/lanChooser';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import Script from "next/script";
 import en from "../../../../content/thank-you/en.json";
 import fr from "../../../../content/thank-you/fr.json";
+
 
 
 export default function ThankYouPage() {
@@ -73,6 +75,15 @@ export default function ThankYouPage() {
 
     return (
         <div className="min-h-[80vh] bg-gradient-to-br from-purple-50 via-white to-blue-50 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+            <Script id="google-ads-conversion" strategy="afterInteractive">
+                {`
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17945744221/qy8pCNrQl_gbEN2mme1C',
+            'value': 1.0,
+            'currency': 'EUR'
+          });
+        `}
+            </Script>
             <motion.div
                 className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-12 relative z-10"
                 variants={containerVariants}
