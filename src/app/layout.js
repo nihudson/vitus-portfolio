@@ -69,7 +69,7 @@ export const metadata = {
     siteName: "SwitzerIT",
     images: [
       {
-        url: "https://res.cloudinary.com/dg83pvgls/image/upload/v1770264082/vithu-og_batt8r.png",
+        url: "https://res.cloudinary.com/dg83pvgls/image/upload/v1771474331/vithu_og_ltcgwc.png",
         width: 1200,
         height: 630,
         alt: "SwitzerIT Logo",
@@ -84,7 +84,12 @@ export const metadata = {
     description:
       "SwitzerIT supports your IT projects with a professional, secure, and tailored approach. From technical support to fully managed IT services, we put our expertise at the service of your success.",
     images: [
-      "https://res.cloudinary.com/dg83pvgls/image/upload/v1770264082/vithu-og_batt8r.png",
+      {
+        url: "https://res.cloudinary.com/dg83pvgls/image/upload/v1771474331/vithu_og_ltcgwc.png",
+        width: 1200,
+        height: 630,
+        alt: "SwitzerIT Logo",
+      },
     ],
   },
 
