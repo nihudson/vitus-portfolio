@@ -78,7 +78,7 @@ export default function ThankYouPage() {
             <Script id="google-ads-conversion" strategy="afterInteractive">
                 {`
           gtag('event', 'conversion', {
-            'send_to': 'AW-17945744221/qy8pCNrQl_gbEN2mme1C',
+            'send_to': 'AW-17945744221/NvkjCJycgf4bEN2mme1C',
             'value': 1.0,
             'currency': 'EUR'
           });
