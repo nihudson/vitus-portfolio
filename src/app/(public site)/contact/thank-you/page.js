@@ -1,28 +1,32 @@
 'use client';
 
+import { useEffect } from "react";
 import useLan from '@/stores/store/useLan';
 import lanChooser from '@/utiliy/lanChooser';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import Script from "next/script";
 import en from "../../../../content/thank-you/en.json";
 import fr from "../../../../content/thank-you/fr.json";
 
-
-
 export default function ThankYouPage() {
-
-
-
 
     const { ln } = useLan();
     const currentlan = lanChooser(ln, fr, en);
 
-
-
-
-
+    // 🔥 Google Ads conversion (REMPLACE le Script)
+    useEffect(() => {
+        if (typeof window !== "undefined" && window.gtag) {
+            console.log("🔥 sending conversion");
+            window.gtag('event', 'conversion', {
+                send_to: 'AW-17945744221/NvkjCJycgf4bEN2mme1C',
+                value: 1.0,
+                currency: 'CHF',
+            });
+        } else {
+            console.log("❌ gtag not ready");
+        }
+    }, []);
 
     // Animation variants
     const containerVariants = {
@@ -75,15 +79,7 @@ export default function ThankYouPage() {
 
     return (
         <div className="min-h-[80vh] bg-gradient-to-br from-purple-50 via-white to-blue-50 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-            <Script id="google-ads-conversion" strategy="afterInteractive">
-                {`
-          gtag('event', 'conversion', {
-            'send_to': 'AW-17945744221/NvkjCJycgf4bEN2mme1C',
-            'value': 1.0,
-            'currency': 'EUR'
-          });
-        `}
-            </Script>
+
             <motion.div
                 className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-12 relative z-10"
                 variants={containerVariants}
@@ -126,7 +122,6 @@ export default function ThankYouPage() {
                 >
                     {currentlan?.des}
                 </motion.p>
-
 
                 {/* Action Buttons */}
                 <motion.div
