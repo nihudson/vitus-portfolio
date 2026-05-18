@@ -119,12 +119,14 @@ export default function Footer() {
                     <div className="flex gap-6">
                         <Link
                             href="/mentions-legales"
+                            style={{touchAction: "manipulation"}}
                             className="text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                         >
                             {currentLan?.terms}
                         </Link>
                         <Link
                             href="/politique-de-confidentialite"
+                            style={{touchAction: "manipulation"}}
                             className="text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                         >
                             {currentLan?.privacy}
