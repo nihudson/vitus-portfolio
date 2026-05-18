@@ -87,7 +87,7 @@ export default function Footer() {
                         <h3 className="text-gray-800 text-xl font-bold mb-4">Contact</h3>
                         <ul className="space-y-3">
                             <li>
-                                <a
+                                
                                     href="mailto:contact@switzerit.com"
                                     className="flex items-center gap-2 text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                                 >
@@ -126,18 +126,18 @@ export default function Footer() {
                 <div className="border-t-2 border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-md text-gray-700">{currentLan?.copy}</p>
                     <div className="flex gap-6">
-                        <a
-                            href="#"
+                        <Link
+                            href="/mentions-legales"
                             className="text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                         >
                             {currentLan?.terms}
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            href="/politique-de-confidentialite"
                             className="text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                         >
                             {currentLan?.privacy}
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
