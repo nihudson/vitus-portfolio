@@ -32,7 +32,6 @@ export default function Footer() {
         <footer className="bg-gray-200 text-gray-300">
             <div className="max-w-7xl mx-auto px-3 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                    {/* Brand Section */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <Image
@@ -48,7 +47,6 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Navigation */}
                     <div>
                         <h3 className="text-gray-800 text-xl font-bold mb-4">Navigation</h3>
                         <ul className="space-y-2">
@@ -65,7 +63,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Services */}
                     <div>
                         <h3 className="text-gray-800 text-xl font-bold mb-4">Services</h3>
                         <ul className="space-y-2">
@@ -82,12 +79,11 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
                     <div>
                         <h3 className="text-gray-800 text-xl font-bold mb-4">Contact</h3>
                         <ul className="space-y-3">
                             <li>
-                                
+                                <a
                                     href="mailto:contact@switzerit.com"
                                     className="flex items-center gap-2 text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                                 >
@@ -111,18 +107,13 @@ export default function Footer() {
                                     className="flex items-start gap-2 text-md text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
                                 >
                                     <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                    <span>
-                                        Route de Villars 15
-                                        <br />
-                                        1867 Ollon, Suisse
-                                    </span>
+                                    <span>Route de Villars 15<br />1867 Ollon, Suisse</span>
                                 </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                {/* Footer Bottom */}
                 <div className="border-t-2 border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-md text-gray-700">{currentLan?.copy}</p>
                     <div className="flex gap-6">
