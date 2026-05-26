@@ -52,7 +52,7 @@ export default function Testimonials() {
   const shown = t.reviews.slice(active * visible, active * visible + visible);
 
   return (
-    <section className="py-20 px-3 bg-gray-50">
+    <section className="py-20 px-3 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -83,7 +83,7 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: i * 0.08 }}
-              className="bg-white rounded-2xl p-6 border border-gray-100 flex flex-col"
+              className="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col"
             >
               <Stars />
               <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5">
