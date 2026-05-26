@@ -52,7 +52,7 @@ export default function Testimonials() {
   const shown = t.reviews.slice(active * visible, active * visible + visible);
 
   return (
-    <section className="pt-8 pb-8 px-3 bg-white border-t-2 border-gray-200">
+    <section className="pt-8 pb-8 px-3 bg-white">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
