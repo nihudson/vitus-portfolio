@@ -61,7 +61,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="text-center mb-12"
+          className="text-center mb-6"
         >
           <span className="inline-block text-xs font-semibold tracking-widest text-red-600 uppercase mb-3">
           </span>
