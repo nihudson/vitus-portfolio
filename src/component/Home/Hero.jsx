@@ -6,6 +6,7 @@ import lanChooser from "@/utiliy/lanChooser";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import AvailabilityBadge from "@/component/AvailabilityBadge";
+import TestimonialsMarquee from "@/component/Home/TestimonialsMarquee";
 
 export default function Hero() {
     const { ln } = useLan();
@@ -13,10 +14,10 @@ export default function Hero() {
     return (
         <section className="h-[95vh] relative w-full md:h-[85vh] bg-cover bg-center object-top flex items-center heroBG">
             <div className="absolute inset-0 bg-black opacity-0"></div>
+
             {/* Content */}
             <div className="relative z-10 h-full w-full max-w-7xl mx-auto flex flex-col justify-center items-start px-3 text-white text-center lg:text-left aptos">
 
-                {/* 👇 BADGE AJOUTÉ ICI */}
                 <motion.div
                     initial={{ opacity: 0, x: -45 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -54,6 +55,7 @@ export default function Hero() {
                     className="text-sm md:text-lg font-normal w-full lg:w-5/6 text-gray-200 mb-8">
                     {currentLan.description2}
                 </motion.p>
+
                 {/* CTA Buttons */}
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -68,6 +70,12 @@ export default function Hero() {
                     </Link>
                 </motion.div>
             </div>
+
+            {/* Bandeau avis collé en bas de l'image hero */}
+            <div className="absolute bottom-0 left-0 right-0 z-20">
+                <TestimonialsMarquee />
+            </div>
+
         </section>
     );
 }
