@@ -18,7 +18,7 @@ export default function CTASection() {
 
 
     return (
-        <div className="w-full bg-white pt-10 pb-20">
+        <div className="w-full pt-12 pb-20" style={{background:"#0a1628"}}">
             <div className="max-w-7xl mx-auto text-center px-3">
                 {/* Heading */}
                 <motion.h2
