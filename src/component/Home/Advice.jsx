@@ -29,7 +29,7 @@ export default function CTASection() {
                         delay: 0,
                         ease: "easeOut"
                     }}
-                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700 mb-6">
+                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                     {currentlan?.freeConsultation?.title}
                 </motion.h2>
 
@@ -42,7 +42,7 @@ export default function CTASection() {
                         delay: 0.2,
                         ease: "easeOut"
                     }}
-                    className="max-w-3xl text-2xl text-gray-500 font-medium mx-auto">
+                    className="max-w-3xl text-2xl text-gray-300 font-medium mx-auto">
                     {currentlan?.freeConsultation?.subtitle}
                 </motion.p>
 
@@ -70,7 +70,7 @@ export default function CTASection() {
                 </Link>
 
                 {/* Features */}
-                <div className="flex flex-wrap justify-center items-center gap-6 text-black text-sm md:text-base">
+                <div className="flex flex-wrap justify-center items-center gap-6 text-white text-sm md:text-base">
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function CTASection() {
                         <Check className="w-4 h-4 text-red-600" />
                         <span className="text-md font-medium text-gray-500"> {currentlan?.freeConsultation?.features?.[0]}</span>
                     </motion.div>
-                    <div className="hidden sm:block text-black text-red-600">•</div>
+                    <div className="hidden sm:block text-white text-red-600">•</div>
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export default function CTASection() {
                         <Check className="w-4 h-4 text-red-600" />
                         <span className="text-md font-medium text-gray-500"> {currentlan?.freeConsultation?.features?.[1]}</span>
                     </motion.div>
-                    <div className="hidden sm:block text-black text-red-600">•</div>
+                    <div className="hidden sm:block text-white text-red-600">•</div>
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
