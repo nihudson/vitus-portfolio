@@ -18,7 +18,7 @@ export default function CTASection() {
 
 
     return (
-        <div className="w-full pt-12 pb-20" style={{background:"#0a1628"}}>
+        <div className="w-full pt-12 pb-20 bg-white border-t-2 border-gray-200">
             <div className="max-w-7xl mx-auto text-center px-3">
                 {/* Heading */}
                 <motion.h2
@@ -29,7 +29,7 @@ export default function CTASection() {
                         delay: 0,
                         ease: "easeOut"
                     }}
-                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700 mb-6">
                     {currentlan?.freeConsultation?.title}
                 </motion.h2>
 
@@ -42,7 +42,7 @@ export default function CTASection() {
                         delay: 0.2,
                         ease: "easeOut"
                     }}
-                    className="max-w-3xl text-2xl text-gray-300 font-medium mx-auto">
+                    className="max-w-3xl text-2xl text-gray-500 font-medium mx-auto">
                     {currentlan?.freeConsultation?.subtitle}
                 </motion.p>
 
@@ -64,13 +64,13 @@ export default function CTASection() {
                 </motion.p>
 
                 {/* CTA Button */}
-                <Link href={"/contact"} className="text-white bg-red-600 px-6 py-3.5 rounded-full font-semibold text-lg hover:bg-red-700 shadow-md flex w-fit items-center gap-3 mx-auto mb-8 transition-all duration-300 hover:scale-103">
+                <Link href={"/contact"} className="text-gray-700 bg-red-600 px-6 py-3.5 rounded-full font-semibold text-lg hover:bg-red-700 shadow-md flex w-fit items-center gap-3 mx-auto mb-8 transition-all duration-300 hover:scale-103">
                     <Calendar className="w-5 h-5" />
                     {currentlan?.freeConsultation?.cta?.label}
                 </Link>
 
                 {/* Features */}
-                <div className="flex flex-wrap justify-center items-center gap-6 text-white text-sm md:text-base">
+                <div className="flex flex-wrap justify-center items-center gap-6 text-gray-700 text-sm md:text-base">
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function CTASection() {
                         <Check className="w-4 h-4 text-red-600" />
                         <span className="text-md font-medium text-gray-500"> {currentlan?.freeConsultation?.features?.[0]}</span>
                     </motion.div>
-                    <div className="hidden sm:block text-white text-red-600">•</div>
+                    <div className="hidden sm:block text-gray-700 text-red-600">•</div>
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export default function CTASection() {
                         <Check className="w-4 h-4 text-red-600" />
                         <span className="text-md font-medium text-gray-500"> {currentlan?.freeConsultation?.features?.[1]}</span>
                     </motion.div>
-                    <div className="hidden sm:block text-white text-red-600">•</div>
+                    <div className="hidden sm:block text-gray-700 text-red-600">•</div>
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
