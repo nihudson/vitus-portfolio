@@ -5,7 +5,7 @@ import useLan from "@/stores/store/useLan";
 import lanChooser from "@/utiliy/lanChooser";
 import { motion } from "framer-motion";
 
-const COLORS = ["#2563eb","#dc2626","#7c3aed","#0891b2","#059669","#ea580c"];
+const COLORS = ["#dc2626"];
 
 function StarRow() {
     return (
