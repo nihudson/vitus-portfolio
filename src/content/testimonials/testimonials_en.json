@@ -1,0 +1,38 @@
+{
+  "sectionTag": "Client reviews",
+  "sectionTitle": "What our clients say",
+  "sectionSub": "Genuine feedback from people and businesses we have supported.",
+  "googleLabel": "Verified Google reviews",
+  "reviews": [
+    {
+      "name": "Christiane Denna",
+      "date": "This week",
+      "text": "My experience with SwitzerIT to restore my passwords and computer functionality was a complete success. Professionalism, patience, courtesy, and kindness. Anyone with computer problems — you've come to the right place. A big thank you to Mr. Vithu!"
+    },
+    {
+      "name": "Joel Da Veiga",
+      "date": "3 weeks ago",
+      "text": "I used SwitzerIT and I'm very satisfied with their service. The team was quick, efficient, and perfectly met my needs. Communication was smooth and they provided excellent support from start to finish. I highly recommend them."
+    },
+    {
+      "name": "Alexon Uthayakumar",
+      "date": "2 months ago",
+      "text": "SwitzerIT offers a high-quality service. Responsiveness, professionalism, and expertise are all present. You can feel their genuine technical mastery and commitment to excellence. I highly recommend their services."
+    },
+    {
+      "name": "Jose Padou",
+      "date": "3 weeks ago",
+      "text": "Excellent expertise. The team identified the vulnerabilities in my website and gave me excellent advice on how to fix them. Thank you!"
+    },
+    {
+      "name": "Varman",
+      "date": "This week",
+      "text": "A colleague recommended SwitzerIT to me and I'm very happy with their service. They replaced my broken screen and recovered my data. Patient, attentive, and clear explanations throughout the whole process."
+    },
+    {
+      "name": "Antony",
+      "date": "3 months ago",
+      "text": "Excellent work from SwitzerIT. Professionalism, attentiveness, and top-notch service. I recommend them without hesitation for all your IT needs."
+    }
+  ]
+}

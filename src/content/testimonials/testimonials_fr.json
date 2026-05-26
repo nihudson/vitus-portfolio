@@ -1,0 +1,38 @@
+{
+  "sectionTag": "Avis clients",
+  "sectionTitle": "Ce que disent nos clients",
+  "sectionSub": "Des retours authentiques de personnes et entreprises que nous avons accompagnées.",
+  "googleLabel": "Avis Google vérifiés",
+  "reviews": [
+    {
+      "name": "Christiane Denna",
+      "date": "Cette semaine",
+      "text": "Mon expérience avec SwitzerIT pour restaurer mes mots de passe et la fonctionnalité de mon ordinateur a été un succès complet. Professionnalisme, patience, courtoisie et gentillesse. Toute personne ayant des problèmes informatiques, vous êtes au bon endroit. Un grand merci à M. Vithu !"
+    },
+    {
+      "name": "Joel Da Veiga",
+      "date": "Il y a 3 semaines",
+      "text": "J'ai fait appel à SwitzerIT et je suis très satisfait de leur service. L'équipe était rapide, efficace et a parfaitement répondu à mes besoins. La communication était fluide et ils ont assuré un excellent suivi du début à la fin. Je les recommande vivement."
+    },
+    {
+      "name": "Alexon Uthayakumar",
+      "date": "Il y a 2 mois",
+      "text": "SwitzerIT offre un service de haute qualité. Réactivité, professionnalisme et expertise sont au rendez-vous. On sent une vraie maîtrise technique et un engagement vers l'excellence. Je recommande vivement leurs services."
+    },
+    {
+      "name": "Jose Padou",
+      "date": "Il y a 3 semaines",
+      "text": "Excellente expertise. L'équipe a identifié les vulnérabilités de mon site web et m'a prodigué d'excellents conseils pour les corriger. Merci !"
+    },
+    {
+      "name": "Varman",
+      "date": "Cette semaine",
+      "text": "Un collègue m'a recommandé SwitzerIT et je suis très satisfait de leur service. Ils ont remplacé mon écran cassé et récupéré mes données. Patience, écoute et explications claires tout au long du processus."
+    },
+    {
+      "name": "Antony",
+      "date": "Il y a 3 mois",
+      "text": "Excellent travail de la part de SwitzerIT. Professionnalisme, attention et service de qualité. Je les recommande sans hésitation pour tous vos besoins informatiques."
+    }
+  ]
+}
