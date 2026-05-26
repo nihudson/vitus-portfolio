@@ -64,7 +64,7 @@ export default function CTASection() {
                 </motion.p>
 
                 {/* CTA Button */}
-                <Link href={"/contact"} className="text-gray-700 bg-red-600 px-6 py-3.5 rounded-full font-semibold text-lg hover:bg-red-700 shadow-md flex w-fit items-center gap-3 mx-auto mb-8 transition-all duration-300 hover:scale-103">
+                <Link href={"/contact"} className="text-gray-700 bg-red-600 px-6 py-3.5 rounded-full font-semibold text-lg hover:bg-red-700 shadow-md flex w-fit items-center text-white gap-3 mx-auto mb-8 transition-all duration-300 hover:scale-103">
                     <Calendar className="w-5 h-5" />
                     {currentlan?.freeConsultation?.cta?.label}
                 </Link>
