@@ -2,19 +2,14 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-
-//local font is here
 const Aptos = localFont({
   src: [
     {
@@ -40,7 +35,6 @@ const Aptos = localFont({
   ],
   variable: "--font-Aptos",
 });
-
 const Comic = localFont({
   src: [
     {
@@ -51,16 +45,10 @@ const Comic = localFont({
   ],
   variable: "--font-Comic",
 });
-
-
-
-
-
 export const metadata = {
   title: "SwitzerIT - Software & IT Solutions",
   description:
     "SwitzerIT supports your IT projects with a professional, secure, and tailored approach. From technical support to fully managed IT services, we put our expertise at the service of your success.",
-
   openGraph: {
     title: "SwitzerIT - Software & IT Solutions",
     description:
@@ -77,7 +65,6 @@ export const metadata = {
     ],
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "SwitzerIT - Software & IT Solutions",
@@ -87,23 +74,17 @@ export const metadata = {
       "https://res.cloudinary.com/dg83pvgls/image/upload/v1771474781/vithu_og_xneiln.png"
     ],
   },
-
   metadataBase: new URL("https://www.switzerit.com"),
 };
-
-
-
-
-
-
-
 export default function RootLayout({ children }) {
-
-
   return (
     <html lang="en">
-
       <head>
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/d45ef73a4ce9d5818a412468/script.js"
+          strategy="beforeInteractive"
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18190023032"
           strategy="beforeInteractive"
@@ -117,8 +98,6 @@ export default function RootLayout({ children }) {
       `}
         </Script>
       </head>
-
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${Comic.variable} ${Aptos.variable} antialiased`}
       >
