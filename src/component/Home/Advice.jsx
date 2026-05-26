@@ -18,7 +18,7 @@ export default function CTASection() {
 
 
     return (
-        <div className="w-full pt-12 pb-20" style={{background:"linear-gradient(to bottom, #ffffff 0%, #0a1628 18%)"}}>
+        <div className="w-full pt-12 pb-20" style={{background:"#0a1628"}}>
             <div className="max-w-7xl mx-auto text-center px-3">
                 {/* Heading */}
                 <motion.h2
