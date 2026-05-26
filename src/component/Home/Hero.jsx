@@ -6,7 +6,6 @@ import lanChooser from "@/utiliy/lanChooser";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import AvailabilityBadge from "@/component/AvailabilityBadge";
-import TestimonialsMarquee from "@/component/Home/TestimonialsMarquee";
 
 export default function Hero() {
     const { ln } = useLan();
@@ -71,9 +70,6 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Bandeau avis collé en bas de l'image hero */}
-            <div className="absolute bottom-0 left-0 right-0 z-20">
-                <TestimonialsMarquee />
             </div>
 
         </section>
