@@ -62,6 +62,8 @@ export default function TestimonialsMarquee() {
             <div className="absolute top-0 left-0 right-0 h-12 z-10 pointer-events-none"
                 style={{ background: "linear-gradient(to bottom, rgba(10,22,40,0) 0%, #0a1628 100%)" }} />
 
+            {/* Fondu haut */}
+            <div className="absolute top-0 left-0 right-0 h-10 z-20 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(10,22,40,0.6), transparent)" }} />
             {/* Fade gauche */}
             <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
                 style={{ background: "linear-gradient(to right, rgba(10,22,40,0.95), transparent)" }} />
