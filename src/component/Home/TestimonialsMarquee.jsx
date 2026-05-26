@@ -56,7 +56,7 @@ export default function TestimonialsMarquee() {
     const doubled = [...list, ...list];
 
     return (
-        <div className="w-full overflow-hidden relative" style={{ background: "#0a1628", paddingBottom: "32px" }}>
+        <div className="w-full overflow-hidden relative" style={{ paddingBottom: "32px" }}>
 
             {/* Fondu haut — se fond dans le bas du hero */}
             <div className="absolute top-0 left-0 right-0 h-12 z-10 pointer-events-none"
@@ -64,10 +64,10 @@ export default function TestimonialsMarquee() {
 
             {/* Fade gauche */}
             <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to right, #0a1628, transparent)" }} />
+                style={{ background: "linear-gradient(to right, rgba(10,22,40,0.95), transparent)" }} />
             {/* Fade droite */}
             <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to left, #0a1628, transparent)" }} />
+                style={{ background: "linear-gradient(to left, rgba(10,22,40,0.95), transparent)" }} />
 
             {/* Track */}
             <div className="flex gap-4 w-max pt-4" style={{ animation: "marquee 32s linear infinite" }}>
