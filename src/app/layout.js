@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
+import CookieBanner from "@/component/CookieBanner";
 import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,11 +82,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <Script
-          id="cookieyes"
-          src="https://cdn-cookieyes.com/client_data/d45ef73a4ce9d5818a412468/script.js"
-          strategy="afterInteractive"
-        />
-        <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18190023032"
           strategy="beforeInteractive"
         />
@@ -102,6 +98,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${Comic.variable} ${Aptos.variable} antialiased`}
       >
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
