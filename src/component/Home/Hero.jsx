@@ -6,6 +6,7 @@ import lanChooser from "@/utiliy/lanChooser";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import AvailabilityBadge from "@/component/AvailabilityBadge";
+import TestimonialsMarquee from "@/component/Home/TestimonialsMarquee";
 
 export default function Hero() {
     const { ln } = useLan();
@@ -15,7 +16,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-black opacity-0"></div>
 
             {/* Content */}
-            <div className="relative z-10 h-full w-full max-w-7xl mx-auto flex flex-col justify-center items-start px-3 text-white text-center lg:text-left aptos">
+            <div className="relative z-10 h-full w-full max-w-7xl mx-auto flex flex-col justify-center items-start px-3 pb-36 text-white text-center lg:text-left aptos">
 
                 <motion.div
                     initial={{ opacity: 0, x: -45 }}
@@ -71,6 +72,9 @@ export default function Hero() {
             </div>
 
 
+        <div className="absolute bottom-0 left-0 right-0 z-20">
+            <TestimonialsMarquee />
+        </div>
         </section>
     );
 }
