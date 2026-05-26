@@ -35,10 +35,7 @@ function StarRow() {
 function Card({ review }) {
     return (
         <div className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-4 w-72 flex-shrink-0">
-            <div
-                className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                style={{ background: review.color }}
-            >
+            <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0" style={{ background: review.color }}>
                 {review.name[0]}
             </div>
             <div>
@@ -56,32 +53,19 @@ export default function TestimonialsMarquee() {
     const doubled = [...list, ...list];
 
     return (
-        <div className="w-full overflow-hidden relative" style={{ paddingBottom: "32px" }}>
-
-            {/* Fondu haut — se fond dans le bas du hero */}
-            <div className="absolute top-0 left-0 right-0 h-12 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to bottom, rgba(10,22,40,0) 0%, #0a1628 100%)" }} />
-
-            {/* Fondu haut */}
-            <div className="absolute top-0 left-0 right-0 h-10 z-20 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(10,22,40,0.6), transparent)" }} />
+        <section className="w-full overflow-hidden relative py-8" style={{ background: "#0a1628" }}>
             {/* Fade gauche */}
             <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to right, rgba(10,22,40,0.95), transparent)" }} />
+                style={{ background: "linear-gradient(to right, #0a1628, transparent)" }} />
             {/* Fade droite */}
             <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to left, rgba(10,22,40,0.95), transparent)" }} />
+                style={{ background: "linear-gradient(to left, #0a1628, transparent)" }} />
 
-            {/* Track */}
-            <div className="flex gap-4 w-max pt-4" style={{ animation: "marquee 32s linear infinite" }}>
+            <div className="flex gap-4 w-max" style={{ animation: "marquee 32s linear infinite" }}>
                 {doubled.map((r, i) => <Card key={i} review={r} />)}
             </div>
 
-            <style>{`
-                @keyframes marquee {
-                    0%   { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                }
-            `}</style>
-        </div>
+            <style>{`@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`}</style>
+        </section>
     );
 }
