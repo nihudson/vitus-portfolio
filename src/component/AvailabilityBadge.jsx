@@ -4,23 +4,26 @@ import useLan from "@/stores/store/useLan";
 
 const content = {
     fr: {
-        available: { label: "Disponible maintenant", sub: "Réponse en moins de 2h" },
-        away:      { label: "Hors des horaires",     sub: "Reprend demain à 8h00" },
+        available:    { label: "Disponible maintenant", sub: "Réponse en moins de 2h" },
+        away_tonight: { label: "Hors des horaires",     sub: "Reprend demain à 8h00" },
+        away_morning: { label: "Hors des horaires",     sub: "Ouvre aujourd'hui à 8h00" },
     },
     en: {
-        available: { label: "Available now",         sub: "Response within 2h" },
-        away:      { label: "Outside business hours",sub: "Back tomorrow at 8am" },
+        available:    { label: "Available now",          sub: "Response within 2h" },
+        away_tonight: { label: "Outside business hours", sub: "Back tomorrow at 8am" },
+        away_morning: { label: "Outside business hours", sub: "Opens today at 8am" },
     },
 };
 
 function getStatus() {
     const now  = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Zurich" }));
     const hour = now.getHours();
-    // 7j/7 — 08h00 à 22h00
-    return hour >= 8 && hour < 22 ? "available" : "away";
+    if (hour >= 8 && hour < 22) return "available";  // 08h → 21h59 : ouvert
+    if (hour >= 22)             return "away_tonight"; // 22h → 23h59 : reprend demain
+    return "away_morning";                             // 00h → 07h59 : ouvre aujourd'hui
 }
 
-const DOT_COLOR = { available: "#22c55e", away: "#f59e0b" };
+const DOT_COLOR = { available: "#22c55e", away_tonight: "#f59e0b", away_morning: "#f59e0b" };
 
 export default function AvailabilityBadge() {
     const [status, setStatus] = useState(getStatus);
@@ -33,8 +36,8 @@ export default function AvailabilityBadge() {
         return () => clearInterval(id);
     }, []);
 
-    const color    = DOT_COLOR[status];
-    const isPulse  = status === "available";
+    const color   = DOT_COLOR[status];
+    const isPulse = status === "available";
 
     return (
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-white text-sm font-medium select-none w-fit">
