@@ -64,7 +64,6 @@ export default function Testimonials() {
           className="text-center mb-12"
         >
           <span className="inline-block text-xs font-semibold tracking-widest text-red-600 uppercase mb-3">
-            {t.sectionTag}
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 aptos">
             {t.sectionTitle}
