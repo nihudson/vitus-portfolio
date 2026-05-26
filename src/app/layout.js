@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
         <Script
           id="cookieyes"
           src="https://cdn-cookieyes.com/client_data/d45ef73a4ce9d5818a412468/script.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18190023032"
