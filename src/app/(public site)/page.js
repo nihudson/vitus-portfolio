@@ -9,7 +9,9 @@ export default function page() {
   return (
     <>
       <Hero />
-      <TestimonialsMarquee />
+      <div style={{ marginTop: "-150px", position: "relative", zIndex: 20 }}>
+        <TestimonialsMarquee />
+      </div>
       <Services />
       <WhyChooseSwitzerIT />
       <Testimonials />

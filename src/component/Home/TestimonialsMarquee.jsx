@@ -53,13 +53,7 @@ export default function TestimonialsMarquee() {
     const doubled = [...list, ...list];
 
     return (
-        <section className="w-full overflow-hidden relative py-8" style={{ background: "#0a1628" }}>
-            {/* Fade gauche */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to right, #0a1628, transparent)" }} />
-            {/* Fade droite */}
-            <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to left, #0a1628, transparent)" }} />
+        <section className="w-full overflow-hidden relative py-8" style={{ background: "transparent" }}>
 
             <div className="flex gap-4 w-max" style={{ animation: "marquee 32s linear infinite" }}>
                 {doubled.map((r, i) => <Card key={i} review={r} />)}
