@@ -4,6 +4,7 @@ import en from "@/content/testimonials/en.json";
 import useLan from "@/stores/store/useLan";
 import lanChooser from "@/utiliy/lanChooser";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const COLORS = ["#2563eb","#dc2626","#7c3aed","#0891b2","#059669","#ea580c"];
 
@@ -23,6 +24,7 @@ export default function Testimonials() {
     const { ln } = useLan();
     const t = lanChooser(ln, fr, en);
     const doubled = [...t.reviews, ...t.reviews];
+    const [paused, setPaused] = useState(false);
 
     return (
         <section className="py-10 bg-white">
@@ -54,31 +56,37 @@ export default function Testimonials() {
                 </div>
             </motion.div>
 
-            {/* Bandeau défilant — pause au survol */}
-            <div
-                className="w-full overflow-hidden relative group"
-                style={{ cursor: "default" }}
-            >
+            {/* Fenêtre limitée — max 3 cartes visibles desktop, ~2 mobile */}
+            <div className="relative" style={{ maxWidth: "980px", margin: "0 auto", overflow: "hidden" }}>
                 {/* Fondu gauche */}
-                <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+                <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
                     style={{ background: "linear-gradient(to right, #ffffff, transparent)" }} />
                 {/* Fondu droite */}
-                <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+                <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
                     style={{ background: "linear-gradient(to left, #ffffff, transparent)" }} />
 
+                {/* Track */}
                 <div
-                    className="flex gap-5 w-max py-2 group-hover:[animation-play-state:paused]"
-                    style={{ animation: "marquee 50s linear infinite" }}
+                    className="flex gap-4 py-3"
+                    style={{
+                        width: "max-content",
+                        animation: "marquee 50s linear infinite",
+                        animationPlayState: paused ? "paused" : "running",
+                    }}
+                    onMouseEnter={() => setPaused(true)}
+                    onMouseLeave={() => setPaused(false)}
+                    onTouchStart={() => setPaused(true)}
+                    onTouchEnd={() => setPaused(false)}
                 >
                     {doubled.map((r, i) => (
                         <div
                             key={i}
-                            className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1"
+                            className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
                             style={{ width: "300px", flexShrink: 0 }}
                         >
                             <div className="flex items-start justify-between mb-3">
                                 <Stars />
-                                <span className="text-3xl leading-none font-serif" style={{ color: "#f0f0f0" }}>"</span>
+                                <span className="text-3xl leading-none font-serif" style={{ color: "#ebebeb" }}>"</span>
                             </div>
                             <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-4">
                                 {r.text}
@@ -103,6 +111,11 @@ export default function Testimonials() {
                     @keyframes marquee {
                         0%   { transform: translateX(0); }
                         100% { transform: translateX(-50%); }
+                    }
+                    @media (max-width: 640px) {
+                        .testimonials-track > div {
+                            width: 260px !important;
+                        }
                     }
                 `}</style>
             </div>
