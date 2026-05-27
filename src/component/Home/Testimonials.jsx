@@ -57,7 +57,7 @@ export default function Testimonials() {
             </motion.div>
 
             {/* Fenêtre limitée — max 3 cartes visibles desktop, ~2 mobile */}
-            <div className="relative" style={{ maxWidth: "980px", margin: "0 auto", overflow: "hidden" }}>
+            <div className="relative" style={{ maxWidth: "1100px", margin: "0 auto", overflow: "hidden" }}>
                 {/* Fondu gauche */}
                 <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
                     style={{ background: "linear-gradient(to right, #ffffff, transparent)" }} />
