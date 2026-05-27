@@ -34,7 +34,7 @@ export default function Testimonials() {
     }, [pages]);
 
     return (
-        <section className="py-16 px-3 bg-white">
+        <section className="py-10 px-3 bg-white">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
