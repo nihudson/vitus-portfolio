@@ -12,7 +12,16 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie_consent");
-    if (!consent) setVisible(true);
+    if (!consent) {
+    setVisible(true);
+  } else if (consent === "accepted") {
+    applyConsent(true, true);
+  } else if (consent === "rejected") {
+    applyConsent(false, false);
+  } else {
+    const saved = JSON.parse(consent);
+    applyConsent(saved.analytics, saved.marketing);
+  }
   }, []);
 
   const applyConsent = (analytics, marketing) => {
