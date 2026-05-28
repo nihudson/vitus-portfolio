@@ -91,11 +91,12 @@ export default function RootLayout({ children }) {
         function gtag(){dataLayer.push(arguments);}
         gtag('consent', 'default', {
         ad_storage: 'denied',
-        analytics_storage: 'denied',
+        analytics_storage: 'granted',
         wait_for_update: 500
       });
       gtag('js', new Date());
         gtag('config', 'AW-18190023032');
+    gtag('config', 'G-TVVML8WR4T');
       `}
         </Script>
       </head>
