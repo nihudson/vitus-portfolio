@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18190023032"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17945744221"
           strategy="beforeInteractive"
         />
         <Script id="google-ads-base" strategy="beforeInteractive">
@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
         wait_for_update: 500
       });
       gtag('js', new Date());
-        gtag('config', 'AW-18190023032');
+        gtag('config', 'AW-17945744221');
     gtag('config', 'G-TVVML8WR4T');
       `}
         </Script>

@@ -31,7 +31,7 @@ export default function ContactSection({ l }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (formData.fullName == "" || formData.email == "" || formData.phone == "" || formData.company == "" || formData.subject == "" || formData.message == "") {
+        if (formData.fullName == "" || formData.email == "" || formData.subject == "" || formData.message == "") {
             toast('Enter all the fields');
             return;
         }
